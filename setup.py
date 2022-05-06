@@ -6,11 +6,10 @@
 # -------------------------------------------#
 
 
-import os
 from setuptools import setup, find_packages
 
 
-__version__ = '0.3.1'
+__version__ = '0.5.1'
 
 
 long_description = open('README.md', encoding='utf-8').read()
@@ -35,6 +34,7 @@ setup(
     platforms=['all'],
     url='https://github.com/SeanLee97/xmnlp',
     packages=find_packages(exclude=('test*', )),
+    package_data={'': ['*.txt', '*.pickle']},
     classifiers=[
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
@@ -50,6 +50,4 @@ setup(
     ],
     install_requires=requirements,
     tests_require=test_requirements,
-    package_data={'': ['*.md', '*.txt', '*.pickle']},
-    include_package_data=True,
 )
